@@ -1,0 +1,38 @@
+[
+  {
+    "area": "Information Technology",
+    "roles": [
+      "Software Developer",
+      "Data Analyst",
+      "Cloud Engineer",
+      "Cybersecurity Analyst"
+    ]
+  },
+  {
+    "area": "Business",
+    "roles": [
+      "Business Analyst",
+      "Marketing Manager",
+      "Financial Analyst",
+      "Operations Manager"
+    ]
+  },
+  {
+    "area": "Engineering",
+    "roles": [
+      "Civil Engineer",
+      "Mechanical Engineer",
+      "Project Engineer",
+      "Structural Designer"
+    ]
+  },
+  {
+    "area": "Hospitality",
+    "roles": [
+      "Hotel Supervisor",
+      "Event Coordinator",
+      "Restaurant Manager",
+      "Tourism Officer"
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "c1",
+    "area": "Information Technology",
+    "level": "Undergraduate",
+    "title": "BSc Computer Science",
+    "duration": "3 years",
+    "city": "Auckland"
+  },
+  {
+    "id": "c2",
+    "area": "Information Technology",
+    "level": "Postgraduate",
+    "title": "MSc Data Science",
+    "duration": "1.5 years",
+    "city": "Wellington"
+  },
+  {
+    "id": "c3",
+    "area": "Business",
+    "level": "Postgraduate",
+    "title": "MBA",
+    "duration": "1 year",
+    "city": "Auckland"
+  },
+  {
+    "id": "c4",
+    "area": "Engineering",
+    "level": "Undergraduate",
+    "title": "BEng (Hons) Civil Engineering",
+    "duration": "4 years",
+    "city": "Christchurch"
+  },
+  {
+    "id": "c5",
+    "area": "Hospitality",
+    "level": "Diploma",
+    "title": "Diploma in Hospitality Management",
+    "duration": "1 year",
+    "city": "Queenstown"
+  }
+]
