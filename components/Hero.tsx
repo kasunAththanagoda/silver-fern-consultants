@@ -51,13 +51,38 @@ export function Hero(){
   };
 
   return (
-    <section className="bg-gradient-to-b from-brand-50 to-white border-b border-gray-100">
+    <section className="bg-gradient-to-b from-brand-50 to-white border-b border-gray-100 relative overflow-hidden">
+      {/* Background decoration */}
+      <motion.div
+        className="absolute top-20 right-10 text-8xl opacity-10"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      >
+        🇳🇿
+      </motion.div>
+
       <div className="container py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
+          {/* FREE Consultation badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg"
+          >
+            <motion.span
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 1, repeat: Infinity }}
+            >
+              🎉
+            </motion.span>
+            FREE CONSULTATION AVAILABLE
+          </motion.div>
+
           <motion.h1 
             variants={itemVariants}
             className="text-4xl md:text-5xl font-extrabold leading-tight"
@@ -77,13 +102,32 @@ export function Hero(){
           </motion.p>
           <motion.div 
             variants={itemVariants}
-            className="mt-6 flex gap-3"
+            className="mt-6 flex flex-col sm:flex-row gap-3"
           >
             <motion.div
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
+              className="relative"
             >
-              <Link href="/contact" className="btn btn-primary">Book Free Consultation</Link>
+              <Link 
+                href="/contact" 
+                className="relative inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:from-green-600 hover:to-green-700 transition-all duration-300"
+              >
+                <motion.span
+                  animate={{ rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
+                >
+                  📞
+                </motion.span>
+                Book FREE Consultation
+                <motion.div
+                  className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full"
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  FREE!
+                </motion.div>
+              </Link>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -97,12 +141,20 @@ export function Hero(){
           variants={cardVariants}
           initial="hidden"
           animate="visible"
-          className="card p-6"
+          className="card p-6 relative"
           whileHover={{ 
             scale: 1.02,
             transition: { duration: 0.2 }
           }}
         >
+          <motion.div
+            className="absolute -top-2 -right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            100% FREE
+          </motion.div>
+
           <motion.ul 
             className="space-y-3 text-gray-700"
             variants={containerVariants}
@@ -121,7 +173,7 @@ export function Hero(){
                 className="flex items-center"
               >
                 <motion.span 
-                  className="text-green-600 mr-2"
+                  className="text-green-600 mr-3 text-lg"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.8 + index * 0.1, duration: 0.3 }}
@@ -136,9 +188,11 @@ export function Hero(){
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
-            className="mt-4 text-sm text-gray-500"
+            className="mt-4 text-sm text-gray-500 border-t border-gray-100 pt-4"
           >
-            100% transparent & ethical consultancy based in Colombo.
+            💯 100% transparent & ethical consultancy based in Colombo.
+            <br />
+            📞 Get your FREE consultation today!
           </motion.p>
         </motion.div>
       </div>

@@ -97,10 +97,29 @@ export function Header(){
           ))}
         </motion.nav>
         <motion.div
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
+          className="relative"
         >
-          <Link href="/contact" className="btn btn-primary">Free Consultation</Link>
+          <Link 
+            href="/contact" 
+            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-xl font-bold shadow-lg hover:from-green-600 hover:to-green-700 transition-all duration-300"
+          >
+            <motion.span
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              📞
+            </motion.span>
+            FREE Consultation
+            <motion.div
+              className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 py-0.5 rounded-full"
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              FREE
+            </motion.div>
+          </Link>
         </motion.div>
       </div>
     </motion.header>
