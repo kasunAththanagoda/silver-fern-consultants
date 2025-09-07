@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
 import courses from '@/data/courses.json';
 import careers from '@/data/careers.json';
 import { CourseFilter } from '@/components/CourseFilter';
+
+export const metadata: Metadata = {
+  title: 'Courses & Careers in New Zealand | Silver Fern Consultancy',
+  description: 'Browse popular study areas and typical career outcomes in New Zealand. Find the right course with Silver Fern Consultancy.',
+};
 
 export default function CoursesPage(){
   return (

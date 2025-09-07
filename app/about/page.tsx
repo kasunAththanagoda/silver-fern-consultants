@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us | Silver Fern Consultancy',
+  description: 'Learn about Silver Fern Consultancy, your trusted education partner in Sri Lanka for studying in New Zealand. Ethical, transparent, and personalized guidance.',
+};
+
 export default function AboutPage(){
   return (
     <section className="container py-12 max-w-3xl">

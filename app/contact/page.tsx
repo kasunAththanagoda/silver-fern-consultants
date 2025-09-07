@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 'use client';
 import { useState } from 'react';
+
+export const metadata: Metadata = {
+  title: 'Contact Us & Book Free Consultation | Silver Fern Consultancy',
+  description: 'Book a free consultation with Silver Fern Consultancy in Colombo. Share your details and get expert guidance for studying in New Zealand.',
+};
 
 export default function ContactPage(){
   const [form, setForm] = useState({ name:'', email:'', phone:'', interest:'', message:'' });

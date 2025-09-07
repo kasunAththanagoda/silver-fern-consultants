@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://www.silverfernconsultancy.lk/sitemap.xml
