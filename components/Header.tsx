@@ -20,8 +20,7 @@ export function Header(){
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
@@ -43,15 +42,14 @@ export function Header(){
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
-        ease: "easeOut"
+        duration: 0.3
       }
     }
   };
 
   return (
     <motion.header 
-      className="sticky top-0 z-40 bg-white/70 backdrop-blur border-b border-gray-100"
+      className="sticky top-0 z-40 bg-black/60 backdrop-blur border-b border-neutral-800"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -63,8 +61,8 @@ export function Header(){
         >
           <Link href="/" className="font-extrabold text-xl tracking-tight">
             <motion.span 
-              className="text-brand-700"
-              whileHover={{ color: "#1e3a8a" }}
+              className="text-brand-500"
+              whileHover={{ color: "#d4af37" }}
               transition={{ duration: 0.2 }}
             >
               Silver
@@ -84,7 +82,7 @@ export function Header(){
             >
               <Link 
                 href={i.href} 
-                className={"hover:text-brand-700 transition-colors duration-200 " + (pathname===i.href?"text-brand-700 font-semibold":"text-gray-700")}
+                className={"hover:text-brand-400 transition-colors duration-200 " + (pathname===i.href?"text-brand-400 font-semibold":"text-gray-300")}
               >
                 <motion.span
                   whileHover={{ y: -1 }}
@@ -103,7 +101,7 @@ export function Header(){
         >
           <Link 
             href="/contact" 
-            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-xl font-bold shadow-lg hover:from-green-600 hover:to-green-700 transition-all duration-300"
+            className="relative inline-flex items-center gap-2 bg-gradient-to-r from-brand-600 to-brand-700 text-black px-4 py-2 rounded-xl font-bold shadow-lg hover:from-brand-500 hover:to-brand-600 transition-all duration-300"
           >
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
@@ -113,7 +111,7 @@ export function Header(){
             </motion.span>
             FREE Consultation
             <motion.div
-              className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1 py-0.5 rounded-full"
+              className="absolute -top-1 -right-1 bg-brand-400 text-black text-xs px-1 py-0.5 rounded-full"
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >

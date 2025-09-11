@@ -9,7 +9,7 @@ export default function ServicesPage(){
   return (
     <section className="container py-12">
       <h1 className="text-3xl md:text-4xl font-bold">Our Services</h1>
-      <p className="text-gray-600 mt-2">Transparent, ethical and student-first guidance.</p>
+      <p className="text-gray-300 mt-2">Transparent, ethical and student-first guidance.</p>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {[
           {title:'Free Counselling',desc:'Profile evaluation, budget planning, city and university shortlisting.'},
@@ -21,7 +21,7 @@ export default function ServicesPage(){
         ].map((s,i)=> (
           <div key={i} className="card p-6">
             <h3 className="text-xl font-semibold">{s.title}</h3>
-            <p className="text-gray-600 mt-2">{s.desc}</p>
+            <p className="text-gray-400 mt-2">{s.desc}</p>
           </div>
         ))}
       </div>

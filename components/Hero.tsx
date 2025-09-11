@@ -20,8 +20,7 @@ export function Hero(){
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        ease: "easeOut"
+        duration: 0.6
       }
     }
   };
@@ -32,8 +31,7 @@ export function Hero(){
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut"
+        duration: 0.8
       }
     }
   };
@@ -44,19 +42,18 @@ export function Hero(){
       opacity: 1,
       x: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
 
   return (
-    <section className="bg-gradient-to-b from-brand-50 to-white border-b border-gray-100 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-black to-neutral-900 border-b border-neutral-800 relative overflow-hidden">
       {/* Background decoration */}
       <motion.div
         className="absolute top-20 right-10 text-8xl opacity-10"
         animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, repeat: Infinity }}
       >
         🇳🇿
       </motion.div>
@@ -72,7 +69,7 @@ export function Hero(){
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg"
+            className="inline-flex items-center gap-2 bg-brand-600 text-black px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg"
           >
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
@@ -88,15 +85,15 @@ export function Hero(){
             className="text-4xl md:text-5xl font-extrabold leading-tight"
           >
             Study in <motion.span 
-              className="text-brand-700"
+              className="text-brand-400"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 0.5, ease: "easeOut" }}
+              transition={{ delay: 0.5, duration: 0.5 }}
             >New Zealand</motion.span> with trusted guidance
           </motion.h1>
           <motion.p 
             variants={itemVariants}
-            className="mt-4 text-lg text-gray-700"
+            className="mt-4 text-lg text-gray-300"
           >
             From university selection to visa success — we help you every step of the way.
           </motion.p>
@@ -111,7 +108,7 @@ export function Hero(){
             >
               <Link 
                 href="/contact" 
-                className="relative inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:from-green-600 hover:to-green-700 transition-all duration-300"
+                className="relative inline-flex items-center gap-3 bg-gradient-to-r from-brand-600 to-brand-700 text-black px-6 py-3 rounded-xl font-bold shadow-lg hover:from-brand-500 hover:to-brand-600 transition-all duration-300"
               >
                 <motion.span
                   animate={{ rotate: [0, 10, -10, 0] }}
@@ -121,7 +118,7 @@ export function Hero(){
                 </motion.span>
                 Book FREE Consultation
                 <motion.div
-                  className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full"
+                  className="absolute -top-1 -right-1 bg-brand-400 text-black text-xs px-1.5 py-0.5 rounded-full"
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
@@ -148,7 +145,7 @@ export function Hero(){
           }}
         >
           <motion.div
-            className="absolute -top-2 -right-2 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+            className="absolute -top-2 -right-2 bg-brand-600 text-black px-3 py-1 rounded-full text-sm font-bold"
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
@@ -156,7 +153,7 @@ export function Hero(){
           </motion.div>
 
           <motion.ul 
-            className="space-y-3 text-gray-700"
+            className="space-y-3 text-gray-300"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -173,7 +170,7 @@ export function Hero(){
                 className="flex items-center"
               >
                 <motion.span 
-                  className="text-green-600 mr-3 text-lg"
+                  className="text-brand-400 mr-3 text-lg"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.8 + index * 0.1, duration: 0.3 }}
@@ -188,7 +185,7 @@ export function Hero(){
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
-            className="mt-4 text-sm text-gray-500 border-t border-gray-100 pt-4"
+            className="mt-4 text-sm text-gray-500 border-t border-neutral-800 pt-4"
           >
             💯 100% transparent & ethical consultancy based in Colombo.
             <br />

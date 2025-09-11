@@ -26,8 +26,7 @@ export function TestimonialStrip(){
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
-        ease: "easeOut"
+        duration: 0.6
       }
     }
   };
@@ -38,21 +37,20 @@ export function TestimonialStrip(){
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
 
   return (
-    <section className="mt-16 bg-gray-50 border-y border-gray-100">
+    <section className="mt-16 bg-neutral-950 border-y border-neutral-800">
       <div className="container py-12">
         <motion.h3 
           variants={titleVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-2xl font-bold"
+          className="text-2xl font-bold text-brand-400"
         >
           Success Stories
         </motion.h3>
@@ -76,7 +74,7 @@ export function TestimonialStrip(){
               whileTap={{ scale: 0.98 }}
             >
               <motion.p 
-                className="text-gray-800"
+                className="text-gray-200"
                 initial={{ opacity: 0.8 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.2 }}
@@ -84,9 +82,9 @@ export function TestimonialStrip(){
                 "{t.q}"
               </motion.p>
               <motion.p 
-                className="text-gray-600 mt-3 text-sm"
+                className="text-gray-400 mt-3 text-sm"
                 initial={{ opacity: 0.7 }}
-                whileHover={{ opacity: 1, color: "#1e40af" }}
+                whileHover={{ opacity: 1, color: "#d4af37" }}
                 transition={{ duration: 0.2 }}
               >
                 — {t.a}

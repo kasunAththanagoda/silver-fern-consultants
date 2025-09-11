@@ -29,8 +29,7 @@ export function ServiceCards({ className = '' }: { className?: string }){
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
@@ -57,13 +56,13 @@ export function ServiceCards({ className = '' }: { className?: string }){
         >
           <motion.h3 
             className="text-lg font-semibold"
-            whileHover={{ color: "#1e40af" }}
+            whileHover={{ color: "#d4af37" }}
             transition={{ duration: 0.2 }}
           >
             {x.title}
           </motion.h3>
           <motion.p 
-            className="text-gray-600 mt-2 text-sm"
+            className="text-gray-400 mt-2 text-sm"
             initial={{ opacity: 0.8 }}
             whileHover={{ opacity: 1 }}
             transition={{ duration: 0.2 }}

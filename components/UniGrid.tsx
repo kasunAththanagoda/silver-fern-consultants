@@ -26,8 +26,7 @@ export function UniGrid({ className = '' }:{ className?: string }){
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
@@ -44,11 +43,11 @@ export function UniGrid({ className = '' }:{ className?: string }){
         <motion.div 
           key={i} 
           variants={uniVariants}
-          className="card p-5 text-gray-800 font-medium hover:shadow-lg transition-all duration-300 cursor-pointer"
+          className="card p-5 text-gray-200 font-medium hover:shadow-lg transition-all duration-300 cursor-pointer"
           whileHover={{ 
             y: -3,
             scale: 1.02,
-            backgroundColor: "#f8fafc",
+            backgroundColor: "#0a0a0a",
             transition: { duration: 0.2 }
           }}
           whileTap={{ scale: 0.98 }}
@@ -57,7 +56,7 @@ export function UniGrid({ className = '' }:{ className?: string }){
             initial={{ opacity: 0.8 }}
             whileHover={{ 
               opacity: 1,
-              color: "#1e40af",
+              color: "#d4af37",
               transition: { duration: 0.2 }
             }}
           >

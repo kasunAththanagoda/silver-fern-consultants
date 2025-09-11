@@ -36,8 +36,7 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
-        ease: "easeOut"
+        duration: 0.5
       }
     }
   };
@@ -48,8 +47,7 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.4,
-        ease: "easeOut"
+        duration: 0.4
       }
     }
   };
@@ -70,13 +68,13 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
             placeholder="Search courses" 
             value={q} 
             onChange={e=>setQ(e.target.value)} 
-            className="rounded-xl border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200"
+            className="rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 placeholder:text-gray-400 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200"
             whileFocus={{ scale: 1.02 }}
           />
           <motion.select 
             value={area} 
             onChange={e=>setArea(e.target.value)} 
-            className="rounded-xl border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200"
+            className="rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200"
             whileFocus={{ scale: 1.02 }}
           >
             <option value="">All areas</option>
@@ -85,7 +83,7 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
           <motion.select 
             value={level} 
             onChange={e=>setLevel(e.target.value)} 
-            className="rounded-xl border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200"
+            className="rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all duration-200"
             whileFocus={{ scale: 1.02 }}
           >
             <option value="">All levels</option>
@@ -115,7 +113,7 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
                 transition={{ delay: index * 0.05 }}
               >
                 <motion.div 
-                  className="text-sm text-gray-500"
+                  className="text-sm text-gray-400"
                   initial={{ opacity: 0.7 }}
                   whileHover={{ opacity: 1 }}
                 >
@@ -123,13 +121,13 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
                 </motion.div>
                 <motion.div 
                   className="font-semibold mt-1"
-                  whileHover={{ color: "#1e40af" }}
+                  whileHover={{ color: "#d4af37" }}
                   transition={{ duration: 0.2 }}
                 >
                   {c.title}
                 </motion.div>
                 <motion.div 
-                  className="text-sm text-gray-600 mt-1"
+                  className="text-sm text-gray-400 mt-1"
                   initial={{ opacity: 0.8 }}
                   whileHover={{ opacity: 1 }}
                 >
@@ -140,7 +138,7 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
           </AnimatePresence>
           {filtered.length===0 && (
             <motion.div 
-              className="text-gray-600 col-span-2 text-center py-8"
+              className="text-gray-400 col-span-2 text-center py-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
@@ -161,14 +159,14 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
         >
           <motion.h4 
             className="font-semibold"
-            whileHover={{ color: "#1e40af" }}
+            whileHover={{ color: "#d4af37" }}
             transition={{ duration: 0.2 }}
           >
             Typical Careers
           </motion.h4>
-          <p className="text-gray-600 text-sm">Based on the selected study area.</p>
+          <p className="text-gray-400 text-sm">Based on the selected study area.</p>
           <motion.ul 
-            className="mt-3 space-y-2 list-disc pl-5 text-gray-800"
+            className="mt-3 space-y-2 list-disc pl-5 text-gray-200"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -181,7 +179,7 @@ export function CourseFilter({ courses, careers }:{ courses: Course[]; careers: 
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: 10 }}
                   transition={{ delay: i * 0.1, duration: 0.3 }}
-                  whileHover={{ x: 5, color: "#1e40af" }}
+                  whileHover={{ x: 5, color: "#d4af37" }}
                 >
                   {r}
                 </motion.li>

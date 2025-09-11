@@ -27,25 +27,25 @@ export default function ContactPage(){
   return (
     <section className="container py-12 max-w-2xl">
       <h1 className="text-3xl md:text-4xl font-bold">Book a Free Consultation</h1>
-      <p className="text-gray-600 mt-2">Share your details and we’ll get back within 1 business day.</p>
+      <p className="text-gray-400 mt-2">Share your details and we’ll get back within 1 business day.</p>
       <form onSubmit={submit} className="card p-6 mt-6 space-y-4">
         <div>
           <label className="block text-sm font-medium">Full Name</label>
-          <input required value={form.name} onChange={e=>setForm({...form,name:e.target.value})} className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2" />
+          <input required value={form.name} onChange={e=>setForm({...form,name:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 placeholder:text-gray-400 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent" />
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium">Email</label>
-            <input type="email" required value={form.email} onChange={e=>setForm({...form,email:e.target.value})} className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2" />
+            <input type="email" required value={form.email} onChange={e=>setForm({...form,email:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 placeholder:text-gray-400 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent" />
           </div>
           <div>
             <label className="block text-sm font-medium">Phone / WhatsApp</label>
-            <input required value={form.phone} onChange={e=>setForm({...form,phone:e.target.value})} className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2" />
+            <input required value={form.phone} onChange={e=>setForm({...form,phone:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 placeholder:text-gray-400 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent" />
           </div>
         </div>
         <div>
           <label className="block text-sm font-medium">Interested In</label>
-          <select value={form.interest} onChange={e=>setForm({...form,interest:e.target.value})} className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2">
+          <select value={form.interest} onChange={e=>setForm({...form,interest:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent">
             <option value="">Select an option</option>
             <option>Foundation / Pathway</option>
             <option>Undergraduate</option>
@@ -56,15 +56,15 @@ export default function ContactPage(){
         </div>
         <div>
           <label className="block text-sm font-medium">Message</label>
-          <textarea rows={4} value={form.message} onChange={e=>setForm({...form,message:e.target.value})} className="mt-1 w-full rounded-xl border border-gray-300 px-3 py-2" />
+          <textarea rows={4} value={form.message} onChange={e=>setForm({...form,message:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 placeholder:text-gray-400 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent" />
         </div>
         <button className="btn btn-primary">Submit</button>
-        {ok && <p className="text-green-600">{ok}</p>}
-        {err && <p className="text-red-600">{err}</p>}
+        {ok && <p className="text-brand-400">{ok}</p>}
+        {err && <p className="text-red-400">{err}</p>}
       </form>
       <div className="mt-8">
         <h2 className="text-xl font-semibold">Visit Us</h2>
-        <p className="text-gray-700 mt-2">Colombo, Sri Lanka · Mon–Fri 9:00–17:00</p>
+        <p className="text-gray-300 mt-2">Colombo, Sri Lanka · Mon–Fri 9:00–17:00</p>
       </div>
     </section>
   );

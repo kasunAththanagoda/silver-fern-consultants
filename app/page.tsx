@@ -11,7 +11,7 @@ export default function HomePage() {
       <Hero />
       <section className="container mt-16">
         <h2 className="text-2xl md:text-3xl font-bold">What we do</h2>
-        <p className="text-gray-600 mt-2">End-to-end guidance—from course selection to visa success.</p>
+        <p className="text-gray-300 mt-2">End-to-end guidance—from course selection to visa success.</p>
         <ServiceCards className="mt-6" />
       </section>
       <section className="container mt-16">
