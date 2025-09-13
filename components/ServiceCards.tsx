@@ -58,42 +58,60 @@ export function ServiceCards({ className = '' }: { className?: string }){
         <motion.div 
           key={i} 
           variants={cardVariants}
-          className="relative group p-6 rounded-xl border border-neutral-800 bg-gradient-to-b from-neutral-900/60 to-neutral-900/20 hover:from-neutral-900/80 hover:to-neutral-900/40 transition-all duration-300 cursor-pointer overflow-hidden"
+          className="relative group cursor-pointer overflow-hidden"
           whileHover={{ 
-            y: -6,
+            y: -8,
             scale: 1.02,
-            transition: { duration: 0.2 }
+            rotateX: 0,
+            rotateY: 0,
+            transition: { duration: 0.22 }
           }}
           whileTap={{ scale: 0.98 }}
         >
-          {/* Accent top border */}
-          <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 opacity-60 group-hover:opacity-100 transition-opacity" />
+          {/* Gradient border wrapper */}
+          <div className="relative rounded-2xl p-[1px] bg-gradient-to-br from-brand-600/40 via-brand-400/10 to-transparent group-hover:from-brand-500/70 group-hover:via-brand-400/20 transition-all duration-300">
+            {/* Card body */}
+            <div className="relative rounded-2xl h-full w-full p-6 border border-neutral-800/70 bg-neutral-900/50 backdrop-blur-sm shadow-[0_4px_24px_rgba(0,0,0,0.25)]">
+              {/* Decorative background glow */}
+              <div className="pointer-events-none absolute -top-16 -right-16 h-40 w-40 rounded-full bg-brand-500/10 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-brand-600/10 blur-3xl" />
 
-          {/* Icon bubble (brightened) */}
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-400 to-brand-500 text-white flex items-center justify-center shadow-lg ring-1 ring-brand-300/40 transition-all duration-300 group-hover:brightness-110 group-hover:shadow-[0_0_24px_rgba(212,175,55,0.35)] group-hover:scale-105">
-            <div className="text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
-              {x.icon}
+              {/* Icon bubble with subtle ping */}
+              <div className="relative w-12 h-12 rounded-xl bg-gradient-to-br from-brand-400 to-brand-500 text-white flex items-center justify-center shadow-lg ring-1 ring-brand-300/40 transition-all duration-300 group-hover:brightness-110 group-hover:shadow-[0_0_24px_rgba(212,175,55,0.35)] group-hover:scale-105">
+                <span className="pointer-events-none absolute -z-10 inline-flex h-full w-full rounded-xl bg-brand-500/30 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
+                  {x.icon}
+                </div>
+              </div>
+
+              <motion.h3 
+                className="text-lg font-semibold mt-4"
+                whileHover={{ color: "#d4af37" }}
+                transition={{ duration: 0.2 }}
+              >
+                {x.title}
+              </motion.h3>
+              <motion.p 
+                className="text-gray-400 mt-2 text-sm"
+                initial={{ opacity: 0.9 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
+              >
+                {x.desc}
+              </motion.p>
+
+              {/* Bottom row: Explore CTA */}
+              {/* <div className="mt-5 flex items-center justify-end">
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-800 bg-neutral-800/40 px-3 py-1.5 text-xs font-semibold text-gray-200 transition-colors hover:bg-neutral-800">
+                  Explore
+                  <svg className="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 10H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z" clipRule="evenodd"/></svg>
+                </span>
+              </div> */}
             </div>
           </div>
 
-          <motion.h3 
-            className="text-lg font-semibold mt-4"
-            whileHover={{ color: "#d4af37" }}
-            transition={{ duration: 0.2 }}
-          >
-            {x.title}
-          </motion.h3>
-          <motion.p 
-            className="text-gray-400 mt-2 text-sm"
-            initial={{ opacity: 0.9 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          >
-            {x.desc}
-          </motion.p>
-
-          {/* Glow on hover */}
-          <div className="pointer-events-none absolute -inset-1 opacity-0 group-hover:opacity-10 blur-2xl transition-opacity bg-brand-500" />
+          {/* Outer hover glow */}
+          <div className="pointer-events-none absolute -inset-1 opacity-0 group-hover:opacity-20 blur-2xl transition-opacity bg-brand-500/40" />
         </motion.div>
       ))}
     </motion.div>
