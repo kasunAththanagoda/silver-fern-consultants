@@ -6,6 +6,7 @@ import { UniGrid } from '@/components/UniGrid';
 // import { TestimonialStrip } from '@/components/TestimonialStrip';
 import { InstitutionsSection } from '@/components/InstitutionsSection';
 import { ImmigrationAdvisor } from '@/components/ImmigrationAdvisor';
+import { UniversitiesShowcase } from '@/components/UniversitiesShowcase';
 
 export default function HomePage() {
   return (
@@ -35,7 +36,7 @@ export default function HomePage() {
           <Link className="btn btn-outline" href="/courses">Explore Courses & Careers</Link>
         </div>
       </section> */}
-      <InstitutionsSection />
+      <UniversitiesShowcase />
       <ImmigrationAdvisor />
       {/* <TestimonialStrip /> */}
       <CTA />

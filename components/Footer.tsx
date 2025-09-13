@@ -100,14 +100,21 @@ export function Footer(){
               className="text-gray-300"
               whileHover={{ x: 5, color: "#d4af37" }}
             >
-              +94 XX XXX XXXX
+              <a href="tel:0223400422" className="hover:underline">022 340 0422</a>
             </motion.p>
             <motion.p 
               variants={linkVariants}
               className="text-gray-300"
               whileHover={{ x: 5, color: "#d4af37" }}
             >
-              info@silverfern.lk
+              <a href="tel:+94702169762" className="hover:underline">+94 70 216 9762</a>
+            </motion.p>
+            <motion.p 
+              variants={linkVariants}
+              className="text-gray-300"
+              whileHover={{ x: 5, color: "#d4af37" }}
+            >
+              <a href="mailto:contact@silverfrenconsultans.nz" className="hover:underline">contact@silverfrenconsultans.nz</a>
             </motion.p>
           </motion.div>
         </motion.div>
