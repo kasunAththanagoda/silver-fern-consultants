@@ -10,7 +10,7 @@ import { ImmigrationAdvisor } from '@/components/ImmigrationAdvisor';
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <section className="container mt-16">
         <div className="relative overflow-hidden rounded-2xl border border-neutral-800 p-6 md:p-8">
           {/* Soft background accents */}
