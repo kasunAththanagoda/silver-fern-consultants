@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { PageTransition } from '@/components/PageTransition';
+import { FloatingWhatsApp } from '@/components/FloatingWhatsApp';
 import Script from 'next/script';
 import { CoverImage } from '@/components/CoverImage';
 import Link from 'next/link';
@@ -121,6 +122,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </PageTransition>
         </main>
         <Footer />
+        {/* Floating WhatsApp button */}
+        <FloatingWhatsApp />
       </body>
     </html>
   );
