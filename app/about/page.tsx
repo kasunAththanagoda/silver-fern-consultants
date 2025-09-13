@@ -31,26 +31,6 @@ const values = [
   }
 ];
 
-const teamMembers = [
-  {
-    name: 'John Smith',
-    role: 'Founder & Director',
-    bio: 'With over 15 years in international education, John has helped 1000+ students achieve their study abroad dreams.',
-    image: 'https://randomuser.me/api/portraits/men/1.jpg'
-  },
-  {
-    name: 'Sarah Johnson',
-    role: 'Senior Education Consultant',
-    bio: 'Specializes in university applications and scholarship opportunities across New Zealand institutions.',
-    image: 'https://randomuser.me/api/portraits/women/1.jpg'
-  },
-  {
-    name: 'David Lee',
-    role: 'Visa & Immigration Specialist',
-    bio: 'David ensures smooth visa processing with his extensive knowledge of New Zealand immigration policies.',
-    image: 'https://randomuser.me/api/portraits/men/2.jpg'
-  }
-];
 
 export default function AboutPage() {
   return (
@@ -72,8 +52,8 @@ export default function AboutPage() {
             <div className="md:w-1/2">
               <div className="relative h-80 w-full rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1523050853548-986d9c3d9e59?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                  alt="Students studying in New Zealand"
+                  src="/certificate.jpg"
+                  alt="our story"
                   fill
                   className="object-cover"
                 />
@@ -82,17 +62,11 @@ export default function AboutPage() {
             <div className="md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-300 mb-6">
-                Founded in 2010, Silver Fern Consultancy has grown to become one of Sri Lanka's most trusted education consultancies for New Zealand education. Our team of dedicated professionals combines local expertise with in-depth knowledge of the New Zealand education system.
+                At Silver Fern Consultancy ,Our team of dedicated professionals combines local expertise with in-depth knowledge of the New Zealand education system.
               </p>
               <p className="text-gray-300 mb-8">
                 We take pride in our ethical approach, ensuring that every student receives honest advice and support throughout their study abroad journey. Our success is measured by the achievements of our students.
               </p>
-              <Link 
-                href="/contact" 
-                className="inline-block bg-brand-600 hover:bg-brand-500 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300"
-              >
-                Get in Touch
-              </Link>
             </div>
           </div>
         </div>
@@ -116,33 +90,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-neutral-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-neutral-800 rounded-lg overflow-hidden shadow-lg">
-                <div className="relative h-64 w-full">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-brand-400 mb-3">{member.role}</p>
-                  <p className="text-gray-300">{member.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+    {/* CTA Section */}
       <section className="py-16 bg-brand-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Journey?</h2>
