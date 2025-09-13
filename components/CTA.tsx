@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export function CTA(){
+
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -10,7 +11,6 @@ export function CTA(){
       y: 0,
       transition: {
         duration: 0.6,
-        // simplified to avoid TS easing issues
         staggerChildren: 0.2
       }
     }
@@ -36,12 +36,21 @@ export function CTA(){
         viewport={{ once: true, margin: "-100px" }}
         className="relative overflow-hidden rounded-3xl border border-neutral-800 shadow-2xl"
       >
-        {/* Emphasis banner: full-width gradient bar */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-700 via-brand-600 to-brand-500 opacity-20" />
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+        {/* Background image with overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="/graduation2.jpg"
+            alt="New Zealand landscape"
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
         <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
 
-        <div className="relative p-8 md:p-12 text-center">
+        <div className="relative p-8 md:p-16 text-center">
 
           <motion.h3
             variants={itemVariants}
