@@ -21,12 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: 'https://www.silverfernconsultancy.lk/courses',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
       url: 'https://www.silverfernconsultancy.lk/contact',
       lastModified: new Date(),
       changeFrequency: 'monthly',

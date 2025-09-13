@@ -66,7 +66,6 @@ export function Footer(){
             {[
               { href: "/about", label: "About" },
               { href: "/services", label: "Services" },
-              { href: "/courses", label: "Courses" },
               { href: "/contact", label: "Contact" }
             ].map((item, index) => (
               <motion.li 

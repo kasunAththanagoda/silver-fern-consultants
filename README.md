@@ -22,7 +22,6 @@ npm run build && npm start
 ## Pages
 - `/` Home (Hero, Services, Top NZ institutions, CTA, Testimonials)
 - `/services` Services overview
-- `/courses` Filterable Courses & Careers
 - `/about` Company profile
 - `/contact` Lead capture form (stored locally)
 

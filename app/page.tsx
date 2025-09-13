@@ -29,13 +29,7 @@ export default function HomePage() {
           <ServiceCards className="mt-8" />
         </div>
       </section>
-      {/* <section className="container mt-16">
-        <h2 className="text-2xl md:text-3xl font-bold">Top New Zealand Institutions</h2>
-        <UniGrid className="mt-6" />
-        <div className="mt-6">
-          <Link className="btn btn-outline" href="/courses">Explore Courses & Careers</Link>
-        </div>
-      </section> */}
+      {/* Institutions section removed: Courses & Careers references cleaned up */}
       <UniversitiesShowcase />
       <ImmigrationAdvisor />
       {/* <TestimonialStrip /> */}
