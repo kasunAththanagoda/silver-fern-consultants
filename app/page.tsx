@@ -3,7 +3,7 @@ import { Hero } from '@/components/Hero';
 import { ServiceCards } from '@/components/ServiceCards';
 import { CTA } from '@/components/CTA';
 import { UniGrid } from '@/components/UniGrid';
-import { TestimonialStrip } from '@/components/TestimonialStrip';
+// import { TestimonialStrip } from '@/components/TestimonialStrip';
 import { InstitutionsSection } from '@/components/InstitutionsSection';
 import { ImmigrationAdvisor } from '@/components/ImmigrationAdvisor';
 
@@ -22,7 +22,7 @@ export default function HomePage() {
             What we do
           </h2>
           <p className="text-gray-300 mt-2 max-w-2xl">
-            End-to-end guidance—from course selection and university applications to scholarships, visas, and pre‑departure support.
+            End-to-end guidance—from course selection and university applications to scholarships, visas, and pre & postdeparture support.
           </p>
 
           <ServiceCards className="mt-8" />
@@ -37,7 +37,7 @@ export default function HomePage() {
       </section>
       <InstitutionsSection />
       <ImmigrationAdvisor />
-      <TestimonialStrip />
+      {/* <TestimonialStrip /> */}
       <CTA />
     </>
   );

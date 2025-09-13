@@ -69,9 +69,9 @@ export function ServiceCards({ className = '' }: { className?: string }){
           {/* Accent top border */}
           <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 opacity-60 group-hover:opacity-100 transition-opacity" />
 
-          {/* Icon bubble */}
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-600 to-brand-700 text-black flex items-center justify-center shadow-lg">
-            <div className="text-black/80">
+          {/* Icon bubble (brightened) */}
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-400 to-brand-500 text-white flex items-center justify-center shadow-lg ring-1 ring-brand-300/40 transition-all duration-300 group-hover:brightness-110 group-hover:shadow-[0_0_24px_rgba(212,175,55,0.35)] group-hover:scale-105">
+            <div className="text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
               {x.icon}
             </div>
           </div>
