@@ -16,13 +16,24 @@ export function FloatingWhatsApp() {
       className="fixed bottom-5 right-5 z-[60]"
       aria-label="Chat on WhatsApp"
     >
-      <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}>
+      {/* Attention wiggle every few seconds */}
+      <motion.div
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        animate={{ rotate: [0, 0, 0, -8, 8, -5, 5, -2, 2, 0], scale: [1, 1, 1, 1.04, 1] }}
+        transition={{ duration: 1.4, repeat: Infinity, repeatDelay: 7 }}
+      >
         <Link
           href={href}
           target="_blank"
           rel="noopener noreferrer"
           className="group relative inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl ring-1 ring-black/10"
         >
+          {/* Glow aura */}
+          <span
+            className="absolute inset-0 -z-10 rounded-full bg-[#25D366] opacity-40 blur-xl transition-opacity duration-300 group-hover:opacity-60"
+            aria-hidden="true"
+          />
           {/* WhatsApp SVG icon */}
           {/* <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +52,13 @@ export function FloatingWhatsApp() {
           <span className="pointer-events-none absolute -top-1 -right-1 inline-flex h-3 w-3">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/70 opacity-75" />
             <span className="relative inline-flex h-3 w-3 rounded-full bg-white" />
+          </span>
+
+          {/* Hover tooltip label */}
+          <span
+            className="pointer-events-none absolute right-16 top-1/2 -translate-y-1/2 translate-x-2 opacity-0 select-none whitespace-nowrap rounded-xl bg-black/80 px-3 py-1 text-sm font-semibold text-white shadow-lg transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+          >
+            Chat on WhatsApp
           </span>
         </Link>
       </motion.div>
