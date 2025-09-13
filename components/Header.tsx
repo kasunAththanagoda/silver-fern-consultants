@@ -109,14 +109,7 @@ export function Header(){
             >
               📞
             </motion.span>
-            FREE Consultation
-            <motion.div
-              className="absolute -top-1 -right-1 bg-brand-400 text-black text-xs px-1 py-0.5 rounded-full"
-              animate={{ scale: [1, 1.1, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              FREE
-            </motion.div>
+            Talk to Us
           </Link>
         </motion.div>
       </div>

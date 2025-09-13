@@ -77,14 +77,7 @@ export function CTA(){
                 >
                   📞
                 </motion.span>
-                Book Your FREE Consultation
-                <motion.span
-                  className="absolute -top-2 -right-2 rounded-full bg-white text-black px-2 py-0.5 text-[10px] font-extrabold"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 1, repeat: Infinity }}
-                >
-                  FREE
-                </motion.span>
+                Talk to Us
               </Link>
             </motion.div>
           </motion.div>

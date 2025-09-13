@@ -74,7 +74,7 @@ export function ServicesPageClient() {
             <p className="mt-2 text-gray-300 max-w-2xl mx-auto">Book your free consultation with our Colombo-based experts and get a personalized plan for your New Zealand journey.</p>
             <div className="mt-5">
               <Link href="/contact" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-brand-600 to-brand-700 px-6 py-3 font-bold text-black shadow-xl hover:from-brand-500 hover:to-brand-600 transition-colors">
-                📞 Book FREE Consultation
+                📞 Talk to Us
               </Link>
             </div>
           </div>
