@@ -1,22 +1,54 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// Site-wide cover image banner.
+// Site-wide cover image banner with image rotation support
 // Modes:
 // - background (default): full-width image with text overlay
 // - split: text left, image right
-// Place your image at /public/cover.jpg (or pass a custom src prop).
-export function CoverImage({
-  src = '/cover.jpg',
-  heightClass = 'h-56 md:h-72 lg:h-80',
-  layout = 'background',
-  children,
-}: {
-  src?: string;
+// Images will automatically rotate every 5 seconds
+
+type CoverImageProps = {
+  images?: string[];
   heightClass?: string;
   layout?: 'background' | 'split';
   children?: React.ReactNode;
-}) {
+  rotationInterval?: number;
+};
+
+const defaultImages = [
+  '/cover.jpg',
+  '/graduation2.jpg',
+  '/cover2.jpg',
+  '/cover3.jpeg',
+  '/cover4.jpg',
+  '/cover5.jpg',
+  '/cover6.jpeg',
+];
+
+export function CoverImage({
+  images = defaultImages,
+  heightClass = 'h-56 md:h-72 lg:h-80',
+  layout = 'background',
+  children,
+  rotationInterval = 8000,
+}: CoverImageProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (images.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, rotationInterval);
+
+    return () => clearInterval(interval);
+  }, [images.length, rotationInterval]);
+
+  const currentImage = images[currentImageIndex];
   if (layout === 'split') {
     return (
       <section className={`relative w-full ${heightClass} select-none`}>
@@ -31,13 +63,22 @@ export function CoverImage({
 
             {/* Right: image */}
             <div className="order-1 md:order-2 relative h-full rounded-xl overflow-hidden">
-              <Image
-                src={src}
-                alt="Cover"
-                fill
-                priority
-                className="object-cover"
-              />
+              {images.map((image, index) => (
+                <div 
+                  key={image}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  <Image
+                    src={image}
+                    alt="Cover"
+                    fill
+                    priority
+                    className="object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -50,7 +91,22 @@ export function CoverImage({
     <section className={`relative w-full ${heightClass} select-none`}>
       {/* Background image */}
       <div className="absolute inset-0">
-        <Image src={src} alt="Cover" fill priority className="object-cover object-top" />
+        {images.map((image, index) => (
+          <div 
+            key={image}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <Image
+              src={image}
+              alt="Cover"
+              fill
+              priority
+              className="object-cover object-top"
+            />
+          </div>
+        ))}
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
