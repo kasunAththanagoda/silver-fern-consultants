@@ -4,6 +4,8 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { PageTransition } from '@/components/PageTransition';
 import Script from 'next/script';
+import { CoverImage } from '@/components/CoverImage';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: {
@@ -82,6 +84,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Header />
+        <CoverImage>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+            Pathway to aurora
+          </h1>
+          <p className="text-gray-300 mt-2 max-w-xl">
+            Ethical, transparent guidance from Sri Lanka to New Zealand—course selection, applications, scholarships, and visa support.
+          </p>
+          <div className="mt-4">
+            <Link href="/contact" className="btn btn-outline">
+              Get FREE Consultation
+            </Link>
+          </div>
+        </CoverImage>
         <main>
           <PageTransition>
             {children}
