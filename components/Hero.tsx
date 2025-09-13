@@ -65,20 +65,6 @@ export function Hero(){
           animate="visible"
         >
           {/* FREE Consultation badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-brand-600 text-black px-4 py-2 rounded-full text-sm font-bold mb-4 shadow-lg"
-          >
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              🎉
-            </motion.span>
-            FREE CONSULTATION AVAILABLE
-          </motion.div>
 
           <motion.h1 
             variants={itemVariants}
@@ -95,7 +81,7 @@ export function Hero(){
             variants={itemVariants}
             className="mt-4 text-lg text-gray-300"
           >
-            From university selection to visa success — we help you every step of the way.
+            From university selection to settling in — we help you every step of the way.
           </motion.p>
           <motion.div 
             variants={itemVariants}

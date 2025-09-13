@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Pathway to aurora
           </h1>
           <p className="text-gray-300 mt-2 max-w-xl">
-            Ethical, transparent guidance from Sri Lanka to New Zealand—course selection, applications, scholarships, and visa support.
+            Professional, transparent guidance from Sri Lanka to New Zealand—course selection, university placement, scholarships, visa support and pre and post departure support.
           </p>
           <div className="mt-4">
             <Link href="/contact" className="btn btn-outline">

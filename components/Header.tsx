@@ -7,6 +7,7 @@ const nav = [
   {href:'/', label:'Home'},
   {href:'/services', label:'Services'},
   {href:'/courses', label:'Courses & Careers'},
+  {href:'/universities', label:'Universities'},
   {href:'/about', label:'About'},
   {href:'/contact', label:'Contact'},
 ];
