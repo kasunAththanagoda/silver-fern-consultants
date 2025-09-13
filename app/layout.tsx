@@ -6,6 +6,7 @@ import { PageTransition } from '@/components/PageTransition';
 import Script from 'next/script';
 import { CoverImage } from '@/components/CoverImage';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: {
@@ -85,15 +86,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         <CoverImage heightClass="h-[70vh] md:h-[80vh] lg:h-screen">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold">
-            Study in New Zealand with trusted guidance
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            Study in {" "}
+            <span
+              className="bg-gradient-to-r from-emerald-300 via-brand-400 to-sky-400 bg-clip-text text-transparent animate-aurora"
+              style={{ backgroundSize: '200% 200%' }}
+            >
+              New Zealand
+            </span>{" "}
+            with trusted guidance
           </h1>
-          <p className="text-gray-200/90 mt-2 max-w-2xl">
+          <div className="mt-3 flex items-center justify-center gap-3">
+            <Image src="/logo.png" alt="Silver Fern Consultancy logo" width={44} height={44} className="rounded" />
+            <span className="text-white font-bold text-lg md:text-xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">Silver Fern Consultancy</span>
+          </div>
+          <p
+            className="mt-2 md:mt-3 text-2xl md:text-xl font-extrabold uppercase tracking-widest bg-gradient-to-r from-emerald-300 via-brand-400 to-sky-400 bg-clip-text text-transparent animate-aurora"
+            style={{ backgroundSize: '200% 200%' }}
+          >
+            Pathway to Aurora
+          </p>
+          <p className="text-gray-100 mt-3 max-w-2xl text-base md:text-lg lg:text-xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.5)]">
             Professional, transparent guidance from Sri Lanka to New Zealand—course selection, university placement, scholarships, visa support and pre and post departure support.
           </p>
           <div className="mt-4">
             <Link href="/contact" className="btn btn-outline">
-              Get FREE Consultation
+              Start your journey with us
             </Link>
           </div>
         </CoverImage>

@@ -22,6 +22,16 @@ export default {
           900: '#4a3a11'
         },
         nz: '#0ea5e9'
+      },
+      keyframes: {
+        aurora: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        }
+      },
+      animation: {
+        aurora: 'aurora 6s ease-in-out infinite',
       }
     },
   },
