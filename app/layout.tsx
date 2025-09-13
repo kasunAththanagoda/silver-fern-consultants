@@ -84,14 +84,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Header />
-        <CoverImage>
-          <p className="text-sm md:text-base font-semibold tracking-wide text-brand-300">
+        <CoverImage heightClass="h-[70vh] md:h-[80vh] lg:h-screen">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold">
             Study in New Zealand with trusted guidance
-          </p>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-            Pathway to aurora
           </h1>
-          <p className="text-gray-300 mt-2 max-w-xl">
+          <p className="text-gray-200/90 mt-2 max-w-2xl">
             Professional, transparent guidance from Sri Lanka to New Zealand—course selection, university placement, scholarships, visa support and pre and post departure support.
           </p>
           <div className="mt-4">
