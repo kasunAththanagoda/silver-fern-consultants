@@ -85,6 +85,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         <CoverImage>
+          <p className="text-sm md:text-base font-semibold tracking-wide text-brand-300">
+            Study in New Zealand with trusted guidance
+          </p>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">
             Pathway to aurora
           </h1>

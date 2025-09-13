@@ -5,6 +5,7 @@ import { CTA } from '@/components/CTA';
 import { UniGrid } from '@/components/UniGrid';
 import { TestimonialStrip } from '@/components/TestimonialStrip';
 import { InstitutionsSection } from '@/components/InstitutionsSection';
+import { ImmigrationAdvisor } from '@/components/ImmigrationAdvisor';
 
 export default function HomePage() {
   return (
@@ -35,6 +36,7 @@ export default function HomePage() {
         </div>
       </section>
       <InstitutionsSection />
+      <ImmigrationAdvisor />
       <TestimonialStrip />
       <CTA />
     </>

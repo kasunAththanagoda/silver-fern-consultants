@@ -120,7 +120,7 @@ export function Hero(){
             </motion.div>
           </motion.div>
         </motion.div>
-        <motion.div 
+        {/* <motion.div 
           variants={cardVariants}
           initial="hidden"
           animate="visible"
@@ -177,7 +177,7 @@ export function Hero(){
             <br />
             📞 Get your FREE consultation today!
           </motion.p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
