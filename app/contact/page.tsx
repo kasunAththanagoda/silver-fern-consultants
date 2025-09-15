@@ -20,12 +20,12 @@ export default function ContactPage(){
   };
 
   return (
-    <section className="container py-12 max-w-2xl">
+    <section className="container py-12 max-w-3xl">
       <h1 className="text-3xl md:text-4xl font-bold">Talk to Us</h1>
       <p className="text-gray-400 mt-2">Share your details and we'll get back within 1 business day.</p>
       <form onSubmit={submit} className="card p-6 mt-6 space-y-4">
         <div>
-          <label className="block text-sm font-medium">Full Name</label>
+          <label className="block text-sm font-medium">Name</label>
           <input required value={form.name} onChange={e=>setForm({...form,name:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 placeholder:text-gray-400 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent" />
         </div>
         <div className="grid md:grid-cols-2 gap-4">
@@ -42,11 +42,11 @@ export default function ContactPage(){
           <label className="block text-sm font-medium">Interested In</label>
           <select value={form.interest} onChange={e=>setForm({...form,interest:e.target.value})} className="mt-1 w-full rounded-xl border border-neutral-700 bg-neutral-900 text-gray-100 px-3 py-2 focus:ring-2 focus:ring-brand-500 focus:border-transparent">
             <option value="">Select an option</option>
+            <option>Need some guidance</option>
             <option>Foundation / Pathway</option>
             <option>Undergraduate</option>
             <option>Postgraduate</option>
             <option>Diploma / Trades</option>
-            <option>English Language</option>
           </select>
         </div>
         <div>
