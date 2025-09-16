@@ -8,18 +8,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Gold-centric brand palette for dark theme
+        // Silver and black theme
         brand: {
-          50:  '#fff9e6',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#facc15',
-          400: '#eab308',
-          500: '#d4af37', // metallic gold
-          600: '#b78e2a',
-          700: '#8f6e20',
-          800: '#6b5218',
-          900: '#4a3a11'
+          50:  '#f8f9fa',
+          100: '#f1f3f5',
+          200: '#e9ecef',
+          300: '#dee2e6',
+          400: '#ced4da',
+          500: '#adb5bd', // silver
+          600: '#868e96',
+          700: '#495057',
+          800: '#343a40',
+          900: '#212529' // near black
         },
         nz: '#0ea5e9'
       },

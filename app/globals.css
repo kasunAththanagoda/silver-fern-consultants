@@ -6,19 +6,19 @@
   --radius: 1rem;
 }
 
-body { @apply bg-black text-gray-100; }
+body { @apply bg-gray-900 text-gray-100; }
 
 .container { @apply mx-auto px-4 md:px-6 lg:px-8; }
 
-.card { @apply rounded-2xl shadow-sm border border-neutral-800 bg-neutral-900; }
+.card { @apply rounded-2xl shadow-sm border border-gray-800 bg-gray-800/50 backdrop-blur-sm; }
 
-.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium shadow-sm transition; }
-.btn-primary { @apply btn bg-brand-600 text-black hover:bg-brand-500; }
-.btn-outline { @apply btn border border-brand-500 text-brand-300 hover:bg-brand-900/30; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200; }
+.btn-primary { @apply btn bg-brand-500 text-gray-900 hover:bg-brand-400 hover:scale-105; }
+.btn-outline { @apply btn border-2 border-brand-500 text-brand-100 hover:bg-brand-500/10 hover:border-brand-400 hover:scale-105; }
 
 /* Enhanced CTA styles for free consultation */
 .btn-free-consultation {
-  @apply relative inline-flex items-center gap-3 bg-gradient-to-r from-brand-600 to-brand-700 text-black px-6 py-3 rounded-xl font-bold shadow-lg hover:from-brand-500 hover:to-brand-600 transition-all duration-300 transform hover:scale-105;
+  @apply relative inline-flex items-center gap-3 bg-gradient-to-r from-brand-400 to-brand-600 text-gray-900 px-6 py-3 rounded-xl font-bold shadow-lg hover:from-brand-300 hover:to-brand-500 transition-all duration-300 transform hover:scale-105;
 }
 
 .btn-free-consultation::after {
@@ -38,8 +38,8 @@ body { @apply bg-black text-gray-100; }
 
 /* Pulse glow effect for important CTAs */
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
-  50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+  0%, 100% { box-shadow: 0 0 5px rgba(173, 181, 189, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(173, 181, 189, 0.8); }
 }
 
 .pulse-glow {
